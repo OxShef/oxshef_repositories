@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Data Repositories</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.4/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<meta name="description" content="This is a template site using RMarkdown for the OxShef Project - a collaboration between University of Oxford and University of Sheffield" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
+<script type="text/javascript" src="js/rmarkdown.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css/rmarkdown.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div id="rStudioHeader" class="alwaysShrunk">
+  <div class="innards bandContent">
+    <div>
+      <a class="menuItem" href="index.html">OxShef: Repositories</a>
+    </div>
+
+    <div id="menu">
+      <div id="menuToggler"></div>
+      <div id="menuItems">
+        <a class="menuItem" href="data-repositories-list.html">Data Repositories</a>
+        <a class="menuItem" href="training-tutorials-and-templates.html">Training, Tutorials and Templates</a>
+        <a class="menuItem gitHub" href="https://github.com/OxShef/oxshef_rmd_template"></a>
+        <a class="menuItem gitHubText" href="https://github.com/OxShef/oxshef_rmd_template">Source on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+#TOC {
+  margin-left: 35px;
+  margin-top: 90px;
+}
+</style>
+
+<script type="text/javascript">
+$(".main-container").removeClass("main-container").removeClass("container-fluid").addClass("footerPushDown");
+</script>
+
+
+
+
+<div id="pageContent" class="standardPadding">
+  <div class="articleBandContent">
+
+<style type="text/css">
+.title {
+  display: none;
+}
+#disqus_thread {
+  display: none;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Data Repositories</h1>
+
+</div>
+
+
+<p><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"></p>
+<div id="data-repositories" class="section level2">
+<h2>Data Repositories</h2>
+<p>Data repositories are dedicated tools for depositing research data such that it can be easily accessed and cited by others, via a dedicated DOI (digital object identifier). Researchers are highly recommended to always deposit data in a dedicated repository instead of as “supplementary materials” alongside publications, for two very important reasons:</p>
+<ul>
+<li>Your data and publication are unique outputs, they should be uniquely and separately citable</li>
+<li>Your data and publications have completely different meta data to one another, for instance: file formats, file size, encoding etc.</li>
+</ul>
+<p>Fortunately, it is typically free and very easy to deposit into a data repository. There are essentially two different types of repository:</p>
+<hr>
+<div class="row">
+<div class="col-sm-6">
+<center>
+<h5>
+General Purpose Repositories
+</h5>
+</center>
+<center>
+<i class='fas fa-archive fa-2x'></i>
+</center>
+<p>These repositories will accept a wide range of file formats and typically have a small number of meta-data fields for deposits to try and make the descriptors as general purpose as possible. <strong>OxShef: Publishers</strong> maintains an overview of the most popular general purpose repositories <a href="#table-of-repositories">below</a>.</p>
+<p>General purpose repositories often have fairly large file size limits, can be used freely and provide API for programmatic access to data.</p>
+</div>
+<div class="col-sm-6">
+<center>
+<h5>
+Specialist Repositories&gt;
+</h5>
+</center>
+<center>
+<i class='fas fa-briefcase fa-2x'></i>
+</center>
+<p>Specialist repositories are designed for specific types of deposit, for instance; GIS, genomic, proteinomic, metereological or archeological data. Datasets require highly detailed meta-data to be added before they can be published, as users of these repositories expect to be able to filter or access datasets based on these fields.</p>
+<p>Scientific Data maintains an <a href="https://www.nature.com/sdata/policies/repositories">excellent guide to specialist repositories</a> but you may wish to refer to <a href="https://re3data.org">re3data.org</a> which is well regarded as the most exhaustive collection of (over 2,000) repositories.</p>
+</div>
+</div>
+<hr>
+<p>It’s important to note that your home institution may require that you update their institutional repository with a “meta data record” that contains the DOI for your research outputs, including deposits with data repositories. Contact your local research support teams for advice.</p>
+<div id="table-of-repositories" class="section level3">
+<h3><strong>OxShef: dataviz</strong> recommended repositories</h3>
+<div id="htmlwidget-4bc66bd3ddc042da9afc" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4bc66bd3ddc042da9afc">{"x":{"filter":"none","data":[["<a href='http://figshare.com' target='_blank'><img src='images/table-of-repositories-logos/figshare-logo.png' style='max-height:80px'><\/img><\/a>","<a href='https://osf.io/' target='_blank'><img src='images/table-of-repositories-logos/osf-logo.png' style='max-height:80px'><\/img><\/a>","<a href='https://zenodo.org/' target='_blank'><img src='images/table-of-repositories-logos/zenodo-logo.png' style='max-height:80px'><\/img><\/a>"],["Figshare is a very popular general purpose data repository owned by Digital Science. There are many publishers who have partnered with Figshare such that publications and supplementary materials are automatically deposited on Figshare, examples include Scientific Data, PLoS and American Chemical Society.<br>\r\n<b>OxShef: dataviz<\/b> templates typically include instructions on how to connect to Figshare programmatically.","OSF (Open Science Framework) is a fairly new general purpose data repository that offers functionality somewhat similar to an electronic lab notebook. OSF provides a variety of collaboration features and connections to services like Mendeley, Dropbox and AWS that are simply not offered by the other respositories in this table.","Zenodo is a popular general purpose data repository housed at CERN. Zenodo has put a lot of effort into supporting a wide range of meta data fields, and is particularly good for depositing code into."],["Individual DOI support versioning:<br>\r\n10.6084/m9.figshare/xxx.v1<br>\r\n10.6084/m9.figshare/xxx.v2\r\n<br>\r\nThe canonical dataset is available at:<br>\r\n10.6084/m9.figshare/xxx","OSF does not currenty support versioning (last updated February 2018)","Supports versioning as of late 2017.\r\n<br>\r\nVersioning creates new DOI which are semantically linked.\r\n<br>\r\n<a href='http://blog.zenodo.org/2017/05/30/doi-versioning-launched/' target='_blank'>Read more here.<\/a>"],["<i class='fas fa-circle'><\/i> <a href='https://docs.figshare.com/' target='_blank'>Fully documented API.<\/a><br>\r\n<i class='fas fa-circle'><\/i> <a href='https://github.com/ropensci/rfigshare' target='_blank'>Dedicated R package<\/a>\r\n<br>\r\n<i class='fas fa-circle'><\/i> <a href='https://figshare.com/blog/figshare_launches_revamped_GitHub_integration/243' target='_blank'>Connect to GitHub repositories.<\/a>","<i class='fas fa-circle'><\/i> <a href='https://developer.osf.io/' target='_blank'>Fully documented API.<\/a><br>\r\n<i class='far fa-circle'><\/i> <a href='https://github.com/chartgerink/osfr' target='_blank'>R package currently under development<\/a>\r\n<br>\r\n<i class='fas fa-circle'><\/i> <a href='http://help.osf.io/m/addons/l/837168-connect-to-a-github-organization' target='_blank'>Connect to GitHub repositories.<\/a>","<i class='fas fa-circle'><\/i> <a href='http://developers.zenodo.org/' target='_blank'>Fully documented API.<\/a><br>\r\n<i class='far fa-circle'><\/i> No maintained R package\r\n<br>\r\n<i class='fas fa-circle'><\/i> <a href='https://zenodo.org/account/settings/github/' target='_blank'>Connect to GitHub repositories.<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repository<\/th>\n      <th>Description<\/th>\n      <th>DOI Versioning Info<\/th>\n      <th>API info<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"100px","targets":0},{"width":"400px","targets":1},{"width":"250px","targets":[2,3]},{"className":"dt-center","targets":0}],"dom":"t","order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+  </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<div id="rStudioFooter" class="band full">
+<div class="bandContent">
+  <h4><a href="http://oxshef.io" target="_blank" style="color:#fff;font-weight:bold">OxShef</a></h4>
+  <div id="logos">
+    <!--<a href="https://twitter.com/rstudio" class="footerLogo twitter"></a>!-->
+    <a href="https://github.com/OxShef/oxshef_rmd_template" class="footerLogo gitHub"></a>
+    <!--<a href="https://www.linkedin.com/company/rstudio-inc" class="footerLogo linkedIn"></a>
+    <a href="https://www.facebook.com/pages/RStudio-Inc/267733656584415" Class="footerLogo facebook"></a>-->
+  </div>
+</div>
+</div>
+
+<!-- bizible -->
+<script type="text/javascript" src="//cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

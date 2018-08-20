@@ -1,0 +1,118 @@
+---
+title: "Data Repositories"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+## Data Repositories
+
+Data repositories are dedicated tools for depositing research data such that it can be easily accessed and cited by others, via a dedicated DOI (digital object identifier). Researchers are highly recommended to always deposit data in a dedicated repository instead of as "supplementary materials" alongside publications, for two very important reasons:
+
+- Your data and publication are unique outputs, they should be uniquely and separately citable
+- Your data and publications have completely different meta data to one another, for instance: file formats, file size, encoding etc.
+
+Fortunately, it is typically free and very easy to deposit into a data repository. There are essentially two different types of repository:
+
+<hr>
+
+<div class='row'>
+
+<div class='col-sm-6'>
+
+<center><h5>General Purpose Repositories</h5></center>
+<center><i class='fas fa-archive fa-2x'></i></center>
+These repositories will accept a wide range of file formats and typically have a small number of meta-data fields for deposits to try and make the descriptors as general purpose as possible. **OxShef: Publishers** maintains an overview of the most popular general purpose repositories [below](#table-of-repositories).
+
+General purpose repositories often have fairly large file size limits, can be used freely and provide API for programmatic access to data.
+
+</div>
+
+<div class='col-sm-6'>
+
+<center><h5>Specialist Repositories></h5></center>
+<center><i class='fas fa-briefcase fa-2x'></i></center>
+Specialist repositories are designed for specific types of deposit, for instance; GIS, genomic, proteinomic, metereological or archeological data. Datasets require highly detailed meta-data to be added before they can be published, as users of these repositories expect to be able to filter or access datasets based on these fields. 
+
+Scientific Data maintains an [excellent guide to specialist repositories](https://www.nature.com/sdata/policies/repositories) but you may wish to refer to [re3data.org](https://re3data.org) which is well regarded as the most exhaustive collection of (over 2,000) repositories. 
+
+</div>
+
+</div>
+
+<hr>
+
+It's important to note that your home institution may require that you update their institutional repository with a "meta data record" that contains the DOI for your research outputs, including deposits with data repositories. Contact your local research support teams for advice.
+
+### **OxShef: dataviz** recommended repositories {#table-of-repositories}
+
+```{r repositories-DT, echo = FALSE}
+library("tidyverse")
+library("DT")
+library("readxl")
+
+fa_scripting <- "<i class='fa fa-file-code fa-2x'></i>"
+fa_pointAndClick <- "<i class='fa fa-hand-pointer fa-2x'></i>"
+
+fa_icons <- tribble(
+  ~tool.type, ~type,
+  "Scripting", "<i class='fa fa-file-code fa-2x'></i>",
+  "Point and Click", "<i class='fa fa-hand-pointer fa-2x'></i>"
+)
+
+oxshef_repositories <- read_xlsx("oxshef-repositories.xlsx")
+
+oxshef_repositories %>%
+  arrange(repository) %>%
+  mutate(logo = paste0(
+    "<a href='", url, "' target='_blank'>",
+    "<img src='images/table-of-repositories-logos/", image.path, "' style='max-height:80px'></img>",
+    "</a>"
+  )) %>%
+  # left_join(fa_icons) %>%
+  # select(-url, -tool.type, -image.path, -tool) %>%
+  # mutate(external.data.support = ifelse(external.data.support,
+  #   "<i class='fas fa-circle'></i>",
+  #   "<i class='far fa-circle'></i>"
+  # )) %>%
+  select(logo, everything(), -repository, -url, -image.path) %>%
+  datatable(
+    escape = FALSE,
+    rownames = FALSE,
+    colnames = c(
+      "Repository",
+      "Description",
+      "DOI Versioning Info",
+      "API info"
+    ),
+    options = list(
+      scrollX = TRUE,
+      autoWidth = TRUE,
+      columnDefs = list(
+        list(width = "100px", targets = c(0)),
+        list(width = "400px", targets = c(1)),
+        list(width = "250px", targets = c(2, 3)),
+        list(className = "dt-center", targets = c(0))
+      ),
+      dom = "t"
+    ),
+    width = "100%"
+  )
+```

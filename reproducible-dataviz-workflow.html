@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Reproducible dataviz workflow</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="site_libs/pymjs-1.3.2/pym.v1.js"></script>
+<script src="site_libs/widgetframe-binding-0.3.1/widgetframe.js"></script>
+
+<meta name="description" content="This is a template site using RMarkdown for the OxShef Project - a collaboration between University of Oxford and University of Sheffield" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
+<script type="text/javascript" src="js/rmarkdown.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css/rmarkdown.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div id="rStudioHeader" class="alwaysShrunk">
+  <div class="innards bandContent">
+    <div>
+      <a class="menuItem" href="index.html">OxShef: Repositories</a>
+    </div>
+
+    <div id="menu">
+      <div id="menuToggler"></div>
+      <div id="menuItems">
+        <a class="menuItem" href="data-repositories-list.html">Data Repositories</a>
+        <a class="menuItem" href="training-tutorials-and-templates.html">Training, Tutorials and Templates</a>
+        <a class="menuItem gitHub" href="https://github.com/OxShef/oxshef_rmd_template"></a>
+        <a class="menuItem gitHubText" href="https://github.com/OxShef/oxshef_rmd_template">Source on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+#TOC {
+  margin-left: 35px;
+  margin-top: 90px;
+}
+</style>
+
+<script type="text/javascript">
+$(".main-container").removeClass("main-container").removeClass("container-fluid").addClass("footerPushDown");
+</script>
+
+
+
+
+<div id="pageContent" class="standardPadding">
+  <div class="articleBandContent">
+
+<style type="text/css">
+.title {
+  display: none;
+}
+#disqus_thread {
+  display: none;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Reproducible dataviz workflow</h1>
+
+</div>
+
+
+<div id="towards-a-reproducible-dataviz-workflow" class="section level2">
+<h2>Towards a reproducible dataviz workflow</h2>
+<p>Reproducible research requires full documentation and disclosure of all steps in your data collection, analysis and presentation. Creating reproducible data visualisations is no different. It should be possible for another researcher (or member of the public) to recreate your dataviz by following your workflow.</p>
+<p>If a dataviz tool allows researchers to meet <strong>all</strong> of the following criteria, it passes the <strong>OxShef: dataviz</strong> reproducability standards and is marked as such in the <a href="oxshef-tools.netlify.com/list-of-tools.html#table-of-tools">table of dataviz tools</a>. We strive to provide <a href="training-tutorials-and-templates">dedicated training, tutorials and templates</a> for all tools that meet these criteria.</p>
+<div class="row">
+<div class="col-sm-5">
+<ul>
+<li>Your research data is published in a DOI-issuing repository</li>
+<li>Your visualisation pulls data directly from the data repository</li>
+<li>Your scripts/steps to produce your visualisation are deposited in a DOI-issuing repository</li>
+<li>Your research data, publication, visualisation scripts all reference one another</li>
+<li>Your ORCID is included in all of these outputs.</li>
+</ul>
+</div>
+<div class="col-sm-7">
+<center>
+<p><img src='images/rdm-for-all-outputs.png' style='max-width:500px' width='100%'></img></p>
+</center>
+</div>
+</div>
+<p>To help you select tools and a workflow that meets these criteria, you might find the flowchart below useful:</p>
+<p><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"></p>
+<style>
+#mermaidChart0 { 
+    min-height: 900px;
+    min-width: 800px;
+}
+</style>
+<p><a href='http://google.com' target='_blank'> <div id="htmlwidget-96395f35d6675b43def5" style="width:100%;height:900px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-96395f35d6675b43def5">{"x":{"url":"reproducible-dataviz-workflow_files/figure-html//widgets/widget_tool-selection-flowchart.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script> </a></p>
+</div>
+
+  </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<div id="rStudioFooter" class="band full">
+<div class="bandContent">
+  <h4><a href="http://oxshef.io" target="_blank" style="color:#fff;font-weight:bold">OxShef</a></h4>
+  <div id="logos">
+    <!--<a href="https://twitter.com/rstudio" class="footerLogo twitter"></a>!-->
+    <a href="https://github.com/OxShef/oxshef_rmd_template" class="footerLogo gitHub"></a>
+    <!--<a href="https://www.linkedin.com/company/rstudio-inc" class="footerLogo linkedIn"></a>
+    <a href="https://www.facebook.com/pages/RStudio-Inc/267733656584415" Class="footerLogo facebook"></a>-->
+  </div>
+</div>
+</div>
+
+<!-- bizible -->
+<script type="text/javascript" src="//cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

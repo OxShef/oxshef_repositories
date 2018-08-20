@@ -1,0 +1,36 @@
+---
+title: "OxShef: Repositories"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+<h2> **OxShef: Repositories** also maintains an overview of [data repositories](data-repositories-list.html) and their suitability for a reproducible dataviz workflow</h2>
+
+<center>
+
+<p>
+<img src="images/dash-logo.svg" alt="" width="22%" height="12%">&nbsp;&nbsp;
+<img src="images/jupyter-logo.png" alt="" width="12%" height="12%">&nbsp;&nbsp;
+<img src="images/shiny-logo.png" alt="" width="10%" height="10%">&nbsp;&nbsp;
+<img src="images/vega-lite-logo.png" alt="" width="22%" height="12%">
+
+</p>
+</center>
+

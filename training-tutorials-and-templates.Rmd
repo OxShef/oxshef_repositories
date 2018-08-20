@@ -1,0 +1,22 @@
+---
+title: "Training, Tutorials and Templates"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+**OxShef: Publishers** provides resources to assist researchers in finding publishers who support or else collaborate in the embedding of data visualisations alongside publications, and what constitutes a [reproducible dataviz workflow](http://oxshef-publishers.netlify.com/reproducible-dataviz-workflow.html).
+
+There are two extremely important technologies you should know about to work reproducibly:
+
+- DOI: Digital Object Identifiers (DOI) allow research outputs to be uniquely and efficiently cited, all genuine academic journals and [data repositories](data-repositories-list.html) issue DOI so that publications and datasets may be cited separately. DOI always have the format `10.xxxx/xx.x` and these can be converted into links that resolve to the research output as follows: [doi.org/10.xxxx/x.x]().
+
+- ORCID: Open Researcher and Contributor ID (ORCID) is a unique identifer for researchers, academics, journalists and anyone who wants to reproducibly claim ownership of their publications. ORCID is tightly integrated into the academic publishing industry, provided your ORCID is included in your article submissions an automatically generated publication profile will be crearted for you ([an example ORCID profile](https://orcid.org/0000-0002-4036-4269)). ORCID are formatted as XXXX-XXXX-XXXX-XXXX and can be converted into links that resolve to the person you're looking for as follows: [orcid.org/XXXX-XXXX-XXXX-XXXX](orcid.org/XXXX-XXXX-XXXX-XXXX). Please note that many institutions support authenticating your position via your ORCID, consider searching for `<institution name> ORCID integration`.
+
+**OxShef: Publishers** doesn't provide any further training or tutorials in this area as including DOI and ORCID in all your research outputs should be sufficient to support a fully [reproducible dataviz workflow](http://oxshef-publishers.netlify.com/reproducible-dataviz-workflow.html). However, you might find it useful to refer to our pages documenting [how to collaborate with publishers on dataviz](http://oxshef-publishers.netlify.com/publishers-list.html)
